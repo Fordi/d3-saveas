@@ -28,3 +28,25 @@ string.
 		/*...*/
 		return serialized;
 	};
+
+
+TODO:
+
+* .svgz support - Should be simple enough.  Requires the the consumer of
+serializers to support Blob return values.
+* Raster image support - Translate SVG to canvas, get blob, save blob.
+* .zip support - Requires an extension point for batches, and elimination of
+single-file save.  I'll want this for .pdf as well: you'd want to make a page
+for each svg tag.
+* .pdf support - this is a higher mountain to climb than you'd think.
+	* I've seen the following, but they're just wrong.  Essentially, the output
+	is PNGs wrapped in a PDF - even for text and shapes.  Since we're starting
+	from .svg files, it would make a lot more sense to build a pdf from those
+	_correctly_, using the SVG's computed styles.  This may or may not mean pdf
+	output would be unsupported using jsdom under node (in a node environment,
+	we could declare Inkscape as a dependency, and use that).
+		* https://github.com/CBiX/svgToPdf.js
+		* https://github.com/MrRio/jsPDF
+	* I may not go this route directly, opting to use the browser's `print` function
+	instead.
+
