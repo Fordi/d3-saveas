@@ -3,12 +3,10 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-qunit": "~0.5.2",
-    "grunt-contrib-concat": "~0.4.0",
-    "grunt-contrib-uglify": "~0.5.0"
+	"d3" : "~3.5.16",
+	"jsdom": "~8.4.0",
+	"xmlserializer": "~0.3.3",
+	"xmlhttprequest": "~1.8.0"
   },
   "name": "d3svg",
   "description": "Provide a method to allow a user to download a d3.js graph without server participation",
@@ -26,5 +24,7 @@
   "bugs": {
     "url": "https://github.com/Fordi/d3svg/issues"
   },
-  "homepage": "https://github.com/Fordi/d3svg#readme"
+  "homepage": "https://github.com/Fordi/d3svg#readme",
+  "dependencies": {
+  }
 }
